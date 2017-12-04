@@ -1,0 +1,77 @@
+<div class="container">
+    <h1 class="text-center logo my-4">
+        <a href="#">
+            BeninTechJobs
+        </a>
+    </h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Connexion</h3>
+                    <div
+                        class="alert alert-danger alert-dismissible fade show"
+                        role="alert"
+                        *ngIf="errors">
+                        <div [innerHTML]="errors"></div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form (ngSubmit)="login(form)" #form="ngForm">
+                        <fieldset [disabled]="loading">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control"
+                                    required
+                                    email
+                                    [(ngModel)]="email"
+                                    #emailControl="ngModel"
+                                    [ngClass]="{'is-invalid': form.submitted && emailControl.invalid}">
+                                <div class="invalid-feedback">
+                                    Adresse email incorrect
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    required
+                                    id="password"
+                                    class="form-control"
+                                    [(ngModel)]="password"
+                                    #passwordControl="ngModel"
+                                    [ngClass]="{'is-invalid': form.submitted && passwordControl.invalid}">
+                                <div class="invalid-feedback">
+                                    Mot de passe incorrect
+                                </div>
+                            </div>
+                            <div class="float-left form-check">
+                                <label class="form-check-label small">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="remember"
+                                        [(ngModel)]="remember">
+                                    Se souvenir de moi
+                                </label>
+                            </div>
+                            <p class="float-right small mt-1">
+                                <a routerLink="/reset">Mot de passe oublié?</a>
+                            </p>
+                            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4 mb-2">
+                <a routerLink="/register" class="btn btn-block btn-outline-secondary">Nouveau sur FedaPay? Inscrivez-vous</a>
+            </div>
+        </div>
+    </div>
+</div>
