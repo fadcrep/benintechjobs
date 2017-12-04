@@ -8,6 +8,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routes';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app.routes';
     ShareButtonsModule.forRoot(),
     AuthModule,
     AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
