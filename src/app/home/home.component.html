@@ -1,39 +1,43 @@
 <div class="">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
-    <a class="navbar-brand" href="#">BeninTechJobs</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Découvrir les jobs <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vous recrutez?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <a class="btn btn-outline-success my-2 my-sm-0" routerLink="/register">S'inscrire</a>
-        <a class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Se connecter</a>
-      </form>
-    </div>
-  </nav>
+  <app-navbar></app-navbar>
   <br>
   <div class="container">
-    <div class="row align-items-center" style="height: 80vh">
-      <div class="col text-center">
-        <h1>BeninTechJobs</h1>
-        <p>Recrutez les meilleurs talents tech pour vos besoins</p>
-        <p><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Créer mon profil</button></p>
+    <section class="fdb-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-lg-5 text-center">
+            <h1>Trouvez le boulot de vos rêves</h1>
+            <p class="text-h3">BeninTechJobs est la solution ultime pour trouver un boulot dans l'industrie tech au Bénin</p>
+            <p>
+              <a class="btn ml-md-3" href="https://www.froala.com">Démarrer</a>
+            </p>
+          </div>
+          <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
+            <img alt="image" class="img-fluid" src="https://cdn0.froala.com/assets/editor/pages/B/tour/developer-40334d3bc0d7e31ae288af7fd1212400.svg">
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <img src="https://snap.hr/v2/img/home/hero-illustration.svg" alt="">
+    </section>
+  </div>
+  <div class="container">
+    <div class="text-center">
+      <div class="banner-form">
+        <form action="#">
+          <input type="text" class="form-control" placeholder="Position" style="border: 1px solid black">
+          <div class="dropdown tr-change-dropdown" style="border: 1px solid black">
+            <a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text">Ville</span><i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu tr-change">
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Location 1</a></li>
+              <li><a href="#">Location 2</a></li>
+              <li><a href="#">Location 3</a></li>
+            </ul>
+          </div>
+          <!-- /.category-change -->
+          <button type="submit" class="btn btn-primary" value="Search">Recherchez</button>
+        </form>
       </div>
     </div>
   </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>

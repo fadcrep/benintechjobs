@@ -8,12 +8,16 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routes';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ShareButtonsModule.forRoot(),
     AuthModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
